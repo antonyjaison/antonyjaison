@@ -4,8 +4,14 @@ import styles from "@styles/navbar.module.scss";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   const links = [
     { name: "_hello", link: "/" },
     { name: "_about-me", link: "/about" },
@@ -40,10 +46,10 @@ const Navbar = () => {
         >
           _contact-me
         </Link>
-        <div className={styles.menu_icon}>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className={`${styles.menu_icon} ${isOpen ? styles.open : ''}`} onClick={toggleMenu}>
+          <div className={styles.line}></div>
+          <div className={styles.line}></div>
+          <div className={styles.line}></div>
         </div>
       </div>
     </nav>

@@ -58,3 +58,53 @@
     }
   }
 }
+
+@media (max-width: 886px) {
+  .header {
+    .header_links_left {
+      .page_links {
+        display: none;
+      }
+    }
+    .header_links_right {
+      a {
+        display: none;
+      }
+      .menu_icon {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+        gap: 6px;
+        cursor: pointer;
+        &:focus,
+        &:active {
+          background: transparent;
+        }
+        .line {
+          width: 20px;
+          height: 1px;
+          background-color: var(--text-color-cmt);
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+
+      .menu_icon.open {
+        .line:nth-child(1) {
+          transform: translateY(6px) rotate(-45deg);
+          position: relative;
+          top: 1.5px;
+        }
+
+        .line:nth-child(2) {
+          transform: translateY(6px) rotate(-45deg);
+          opacity: 0;
+        }
+
+        .line:nth-child(3) {
+          transform: translateY(-6px) rotate(45deg);
+        }
+      }
+    }
+  }
+}
