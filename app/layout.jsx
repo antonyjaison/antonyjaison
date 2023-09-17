@@ -1,7 +1,10 @@
+import Navbar from "@components/Navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import styles from "@styles/rootLayout.module.scss";
+import { Fira_Code } from "next/font/google";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const fira = Fira_Code({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Antony Jaison - Full Stack Web Developer Portfolio",
@@ -12,7 +15,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={fira.className}>
+        <main className={styles.main_wrapper}>
+          <Navbar />
+          <main>{children}</main>
+
+          <footer className={styles.footer}></footer>
+        </main>
+      </body>
     </html>
   );
 }
