@@ -1,40 +1,57 @@
-*{
+/* Reset margin for all elements */
+* {
+  margin: 0;
+  padding: 0; /* Add padding: 0; to reset padding as well */
+  box-sizing: border-box; /* Helps ensure that padding and borders don't affect element size */
+}
+
+/* Reset margin for specific elements */
+h1, h2, h3, p {
   margin: 0;
 }
 
-h1,h2,h3,p{
-  margin: 0;
-}
-
+/* Define CSS custom properties (variables) */
 :root {
   --bg-color: #010C15;
   --text-color-cmt: #607B96;
-  --wrapper-bg-color:#011627;
-  --border-color:#1E2D3D;
-  --sidebar-width:310px;
-  --header-height:55px;
-  --active-link-border:#FEA55F;
+  --wrapper-bg-color: #011627;
+  --border-color: #1E2D3D;
+  --sidebar-width: 310px;
+  --header-height: 55px;
+  --active-link-border: #FEA55F;
+  --main-wrapper-height: 90vh;
+  --main-wrapper-width: 95%;
 }
 
+/* Apply styles to the body */
 body {
   background-color: var(--bg-color);
   width: 100%;
   height: 100vh;
+  margin: 0; /* Reset margin for body to ensure no unexpected margins */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.active_link {
-  border-bottom: 3px solid var(--active-link-border);
+.nav_link_txt {
+  color: var(--text-color-cmt);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  text-decoration: none;
 }
 
-@media(max-width:1200px){
-  :root{
-    --sidebar-width:230px;
+/* Media query for screens up to 1200px */
+@media (max-width: 1200px) {
+  :root {
+    --sidebar-width: 230px;
   }
 }
 
-/* @media(max-width:886px){
-
-} */
+/* Media query for screens up to 600px */
+@media (max-width: 600px) {
+  :root {
+    --main-wrapper-height: 95vh;
+  }
+}

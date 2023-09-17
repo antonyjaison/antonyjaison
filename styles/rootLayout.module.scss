@@ -1,5 +1,5 @@
 .main_wrapper {
-  width: 95%;
+  width: var(--main-wrapper-width);
   height: 90vh;
   background-color: var(--wrapper-bg-color);
   border-radius: 8px;
@@ -12,7 +12,6 @@
 
 @media(max-width:600px){
   .main_wrapper {
-    width: 95%;
-    height: 95vh;
+    height: var(--main-wrapper-height);
   }
 }

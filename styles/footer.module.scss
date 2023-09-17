@@ -1,0 +1,31 @@
+.main_wrapper {
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  .left_section {
+    display: flex;
+    p,
+    .icon {
+      border-right: 1px solid var(--border-color);
+      height: var(--header-height);
+      padding: 0 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .right_section {
+    display: flex;
+    border-left: 1px solid var(--border-color);
+    height: var(--header-height);
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+  }
+}

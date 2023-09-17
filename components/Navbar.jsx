@@ -37,6 +37,12 @@ const Navbar = () => {
               </Link>
             );
           })}
+          <Link
+            className={styles.mobile_contact_link}
+            href="/contact"
+          >
+            _contact-me
+          </Link>
         </div>
       </div>
       <div className={styles.header_links_right}>
@@ -46,7 +52,10 @@ const Navbar = () => {
         >
           _contact-me
         </Link>
-        <div className={`${styles.menu_icon} ${isOpen ? styles.open : ''}`} onClick={toggleMenu}>
+        <div
+          className={`${styles.menu_icon} ${isOpen ? styles.open : ""}`}
+          onClick={toggleMenu}
+        >
           <div className={styles.line}></div>
           <div className={styles.line}></div>
           <div className={styles.line}></div>

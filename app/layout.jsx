@@ -1,8 +1,8 @@
-import Navbar from "@components/Navbar";
 import "./globals.css";
 import styles from "@styles/rootLayout.module.scss";
 import { Fira_Code } from "next/font/google";
-import Link from "next/link";
+import Footer from "@components/Footer";
+import Navbar from "@components/Navbar";
 
 const fira = Fira_Code({ subsets: ["latin"] });
 
@@ -19,8 +19,7 @@ export default function RootLayout({ children }) {
         <main className={styles.main_wrapper}>
           <Navbar />
           <main>{children}</main>
-
-          <footer className={styles.footer}></footer>
+          <Footer/>
         </main>
       </body>
     </html>
