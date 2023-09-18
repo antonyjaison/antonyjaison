@@ -29,3 +29,23 @@
     text-decoration: none;
   }
 }
+
+@media (max-width: 500px) {
+  .main_wrapper {
+    .left_section {
+      flex: 7;
+      p{
+        flex:7;
+      }
+      .icon{
+        flex: 1;
+      }
+    }
+    .right_section {
+      flex: 1;
+      p{
+        display: none;
+      }
+    }
+  }
+}

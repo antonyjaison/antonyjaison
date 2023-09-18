@@ -13,12 +13,11 @@ const Footer = () => {
           <img src="/icons/fb.svg" alt="facebook" />
         </Link>
       </div>
-      {/* <div className={styles.right_section}> */}
+      
       <Link className={styles.right_section} href="#">
         <p className="nav_link_txt">@antonyjaison</p>
         <img src="/icons/github.svg" alt="github" />
       </Link>
-      {/* </div> */}
     </footer>
   );
 };

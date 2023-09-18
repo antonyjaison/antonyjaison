@@ -52,14 +52,14 @@ const Navbar = () => {
         >
           _contact-me
         </Link>
-        <div
+        <button
           className={`${styles.menu_icon} ${isOpen ? styles.open : ""}`}
           onClick={toggleMenu}
         >
           <div className={styles.line}></div>
           <div className={styles.line}></div>
           <div className={styles.line}></div>
-        </div>
+        </button>
       </div>
     </nav>
   );
