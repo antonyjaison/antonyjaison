@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav className={styles.header}>
       <div className={styles.header_links_left}>
         <Link className={styles.name_link} href="/">
-          antonyjaison
+          antony-jaison
         </Link>
         <div
           ref={menuRef}
