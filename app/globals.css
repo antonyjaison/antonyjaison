@@ -21,6 +21,8 @@ h1, h2, h3, p {
   --active-link-border: #FEA55F;
   --main-wrapper-height: 90vh;
   --main-wrapper-width: 95%;
+  --body-header-height:40px;
+  --border:1px solid var(--border-color);
 }
 
 /* Apply styles to the body */

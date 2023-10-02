@@ -1,0 +1,121 @@
+// accordion working
+.outer_tab input,
+.tab_content input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.tab_content,
+.inner_tab_content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.arrow_img,
+.wrapper,
+.sub_arrow_img,
+.outer_tab,
+.inner_tab,
+.outer_label label,
+.inner_label label {
+  transition: all 0.35s;
+}
+
+// outer tab
+.outer_tab input:checked ~ .tab_content {
+  max-height: 10rem;
+  padding: 10px 0 0;
+  &:last-child{
+    padding-bottom: 10px;
+  }
+}
+.outer_tab input:checked ~ .outer_tab {
+  padding-bottom: 15px;
+}
+.outer_tab input:checked ~ .outer_label label .arrow_img {
+  transform: rotate(90deg);
+  color: #fff;
+}
+.outer_tab input:checked ~ .outer_label label {
+  color: #fff;
+}
+
+// inner tab
+.tab_content input:checked ~ .inner_tab_content {
+  max-height: 10rem;
+  padding-top: 10px;
+}
+.tab_content input:checked ~ .inner_label label .sub_arrow_img {
+  transform: rotate(90deg);
+}
+.tab_content input:checked ~ .inner_label label {
+  color: #fff;
+}
+
+// styling
+.wrapper {
+  width: 100%;
+  min-height: var(--body-header-height);
+  height: fit-content;
+}
+.outer_label {
+  width: 100%;
+  height: var(--body-header-height);
+  display: flex;
+  align-items: center;
+  border-top: var(--border);
+  border-bottom: var(--border);
+  label {
+    padding-left: 15px;
+    color: #607b96;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+  }
+}
+.inner_label {
+  width: 100%;
+  label {
+    padding-left: 15px;
+    color: #607b96;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+  }
+}
+.inner_tab_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.inner_tab {
+  padding: 0 35px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  p {
+    color: #607b96;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 886px) {
+  .wrapper {
+    min-height: 30px;
+  }
+  .outer_label {
+    height: 30px;
+    display: flex;
+    border: none;
+    background-color: #1e2d3d;
+    label {
+      color: #fff;
+    }
+  }
+}
