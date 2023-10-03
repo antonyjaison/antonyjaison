@@ -36,5 +36,25 @@
     flex: 1;
     margin-right: 26px;
     border-right: var(--border);
+    padding: 18px 40px;
+    transition: all 0.35s;
+    p{
+      color: var(--text-color-cmt);
+      text-align: left;
+    }
+
+    .code_wrapper{
+      display: flex;
+      .code_line_num{
+        width: 50px;
+        p{
+          width: inherit;
+        }
+
+      }
+      .star{
+        width: 20px;
+      }
+    }
   }
 }

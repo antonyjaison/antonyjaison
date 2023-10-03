@@ -1,6 +1,7 @@
 .main_wrapper {
   width: var(--main-wrapper-width);
-  height: 90vh;
+  min-height: 90vh;
+  height: fit-content;
   background-color: var(--wrapper-bg-color);
   border-radius: 8px;
   border: var(--border);
@@ -12,13 +13,6 @@
     flex: 1;
   }
 }
-
-// @media(max-width:886px){
-//   .main_wrapper {
-//     height: fit-content;
-//     min-height: 90vh;
-//   }
-// }
 
 @media(max-width:600px){
   .main_wrapper {

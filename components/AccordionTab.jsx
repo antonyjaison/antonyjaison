@@ -3,7 +3,14 @@
 import styles from "@styles/accordionTab.module.scss";
 import Link from "next/link";
 
+import { useDispatch,useSelector } from "react-redux";
+import { addDetails } from "@features/about/aboutSlice";
+
 const AccordionTab = ({ section }) => {
+  const dispatch = useDispatch()
+  const data = useSelector(state => state.about.about)
+  console.log(data)
+
   const isFolder = (type) => {
     if (type === "file" || type === "data" || type === "link") {
       return false;
@@ -40,6 +47,10 @@ const AccordionTab = ({ section }) => {
         return "x.svg";
     }
   };
+
+  const addToAboutStore = (data) => {
+    dispatch(addDetails(data.content))
+  }
 
   return (
     <div className={styles.wrapper}>
@@ -105,7 +116,7 @@ const AccordionTab = ({ section }) => {
               <div className={styles.inner_tab_content}>
                 {data.content?.map((item) => {
                   return (
-                    <div className={styles.inner_tab}>
+                    <div onClick={() => addToAboutStore(data)} className={styles.inner_tab}>
                       <img src="/icons/txt.svg" alt="" />
                       <p>{item.name}</p>
                     </div>

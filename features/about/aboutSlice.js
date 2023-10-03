@@ -11,7 +11,7 @@ export const aboutSlice = createSlice({
   initialState,
   reducers: {
     addDetails:(state,action) => {
-       return action.payload
+       state.about = action.payload
     }
   },
 })
