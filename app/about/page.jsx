@@ -1,10 +1,12 @@
 import AccordionTab from "@components/AccordionTab";
 import styles from "@styles/about.module.scss";
 import profileData from "@data/profile";
+import AboutInfo from "@components/AboutInfo";
 
 const AboutPage = () => {
   return (
     <main className={styles.wrapper}>
+
       <div className={styles.sidebar}>
         <div className={styles.sidebar_left}>
           <img src="/icons/terminal.svg" alt="sidebar_img" />
@@ -13,12 +15,24 @@ const AboutPage = () => {
         </div>
         <div className={styles.sidebar_right}>
           {profileData.map((section) => (
-            <AccordionTab section={section} />
+            <AccordionTab section={section}  key={section.id}/>
           ))}
         </div>
       </div>
-      <div className={styles.content}></div>
-      <div className={styles.code_content}></div>
+
+      <div className={styles.main_content}>
+        <div className={styles.content}>
+          <AboutInfo />
+        </div>
+
+        <div className={styles.code_content}>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
+          illum nemo maiores laudantium ipsa ab incidunt accusantium, ipsum
+          aliquam dicta? Quam aut facere autem, eius eum sequi suscipit corrupti
+          atque?
+        </div>
+      </div>
+
     </main>
   );
 };

@@ -13,6 +13,13 @@
   }
 }
 
+// @media(max-width:886px){
+//   .main_wrapper {
+//     height: fit-content;
+//     min-height: 90vh;
+//   }
+// }
+
 @media(max-width:600px){
   .main_wrapper {
     height: var(--main-wrapper-height);
