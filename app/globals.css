@@ -29,6 +29,7 @@ h1, h2, h3, p {
 body {
   background-color: var(--bg-color);
   width: 100%;
+  /* min-height: 100vh; */
   height: 100vh;
   margin: 0; /* Reset margin for body to ensure no unexpected margins */
   display: flex;
@@ -54,6 +55,13 @@ body {
 /* Media query for screens up to 600px */
 @media (max-width: 600px) {
   :root {
-    --main-wrapper-height: 95vh;
+    --main-wrapper-width:100%;
+    --main-wrapper-height: 100vh;
+  }
+  body{
+    padding: 15px;
+    height: fit-content;
+    min-height: 100vh;
+    align-items: start;
   }
 }

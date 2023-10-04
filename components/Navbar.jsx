@@ -3,7 +3,7 @@
 import styles from "@styles/navbar.module.scss";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname,useRouter } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
@@ -11,6 +11,7 @@ const Navbar = () => {
   const [animateLinks, setAnimateLinks] = useState(false);
 
   const menuRef = useRef(null);
+  const router = useRouter()
 
   useEffect(() => {
     // Trigger the animation when the component mounts
@@ -19,8 +20,14 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    document.body.style.overflow = isOpen ? "scroll" : "hidden"
     menuRef.current.style.display = isOpen ? "none" : "flex";
   };
+
+  const goto = (href) => {
+    setIsOpen(!isOpen);
+    router.push(href)
+  }
 
   const links = [
     { name: "_hello", link: "/" },
@@ -73,6 +80,7 @@ const Navbar = () => {
           <div className={styles.line}></div>
         </button>
       </div>
+      <div className={isOpen ? styles.bg_dim_active : styles.bg_dim}></div>
     </nav>
   );
 };

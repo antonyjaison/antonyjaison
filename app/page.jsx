@@ -1,6 +1,12 @@
 import styles from "@styles/homepage.module.scss";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Antony Jaison - Full Stack Web Developer Portfolio",
+  description:
+    "Explore the journey of Antony Jaison, a passionate Full Stack Web Developer and 3rd-year IT engineering student. Discover a world of creativity, innovation, and coding excellence through a showcase of projects, skills, and experiences. Join me on this digital odyssey as I transform ideas into web solutions that make a difference.",
+};
+
 export default function Home() {
   return (
     <main className={styles.wrapper}>
