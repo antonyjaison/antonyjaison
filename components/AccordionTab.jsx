@@ -9,7 +9,6 @@ import { addDetails } from "@features/about/aboutSlice";
 const AccordionTab = ({ section }) => {
   const dispatch = useDispatch()
   const data = useSelector(state => state.about.about)
-  console.log(data)
 
   const isFolder = (type) => {
     if (type === "file" || type === "data" || type === "link") {
@@ -118,7 +117,6 @@ const AccordionTab = ({ section }) => {
                   return (
                     <div onClick={() => {
                       addToAboutStore(item)
-                      console.log(item)
                       }} className={styles.inner_tab}>
                       <img src="/icons/txt.svg" alt="" />
                       <p>{item.name}</p>

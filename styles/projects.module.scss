@@ -1,0 +1,107 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  .page_name {
+    display: none;
+  }
+}
+
+.arrow_img{
+  transition: all 0.35s;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  border-right: var(--border);
+
+  // tab working
+  .tab{
+    .tab_checkbox{
+      display: none;
+      &:checked ~ .tab_content{
+        max-height: 10rem;
+        padding: 10px 0 0;
+        &:last-child{
+          padding-bottom: 10px;
+        }
+      }
+    }
+    .tab_checkbox:checked ~ .label label .arrow_img{
+      transform: rotate(90deg);
+
+    }
+    .tab_content{
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.35s;
+    }
+  }
+
+  // tab working
+  .tab{
+    width: 100%;
+    .label{
+      width: inherit;
+      height: var(--body-header-height);
+      display: flex;
+      align-items: center;
+      border-top: var(--border);
+      border-bottom: var(--border);
+      padding-left: 22px;
+      label{
+        color: var(--text-color-cmt);
+        font-size: 16px;
+        font-weight: 400;
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+      }
+    }
+    .tab_content{
+      margin-left: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+      .tab_option{
+        display: flex;
+        gap: 24px;
+        .option_details{
+          height: fit-content;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: var(--text-color-cmt);
+          cursor: pointer;
+          &::before{
+            content: "";
+            width: 18px;
+            height: 18px;
+            border: 1px solid var(--text-color-cmt);
+            border-radius: 3px;
+          }
+        }
+        .tab_option_input{
+          display: none;
+          &:checked + .option_details::before{
+            background: url('/icons/check.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
