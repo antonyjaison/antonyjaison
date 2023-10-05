@@ -19,7 +19,9 @@
       padding: 0 14px;
       border-right: var(--border);
       white-space: nowrap;
-
+      .folder_name{
+        display: none;
+      }
       p {
         font-size: 16px;
         font-weight: 400;
@@ -54,6 +56,50 @@
       }
       .star{
         width: 20px;
+      }
+    }
+  }
+}
+
+@media(max-width:886px){
+  .wrapper {    
+    .header {
+      border-bottom:none;  
+      height: fit-content;
+      .tab {        
+        height: fit-content;  
+        padding: 0 27px;
+        padding-top: 38px;
+        border-right: none;
+        .folder_name{
+          display: block;
+          color: #fff;
+        }
+        p {
+          font-weight: 450;
+          display: flex;
+        }
+        img{
+          display: none;
+        }
+      }
+    }
+  
+    .body{
+      margin-right: 0;
+      border-right: none;
+      padding: 17px 27px;  
+      .code_wrapper{
+        .code_line_num{
+          display: none;  
+        }
+        .star{
+          display: none;
+        }
+        .commented_code{
+          font-weight: 450;
+          line-height: 150%;
+        }
       }
     }
   }

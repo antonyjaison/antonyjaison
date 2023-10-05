@@ -28,9 +28,9 @@ const AccordionTab = ({ section }) => {
       case "interests":
         return "bio.svg";
       case "email":
-        return "bio.svg";
+        return "mail.svg";
       case "phone":
-        return "bio.svg";
+        return "phone.svg";
       case "instagram":
         return "instagram.svg";
       case "linkedin":
@@ -49,7 +49,7 @@ const AccordionTab = ({ section }) => {
   };
 
   const addToAboutStore = (data) => {
-    dispatch(addDetails(data.content))
+    dispatch(addDetails(data))
   }
 
   return (
@@ -116,7 +116,10 @@ const AccordionTab = ({ section }) => {
               <div className={styles.inner_tab_content}>
                 {data.content?.map((item) => {
                   return (
-                    <div onClick={() => addToAboutStore(data)} className={styles.inner_tab}>
+                    <div onClick={() => {
+                      addToAboutStore(item)
+                      console.log(item)
+                      }} className={styles.inner_tab}>
                       <img src="/icons/txt.svg" alt="" />
                       <p>{item.name}</p>
                     </div>

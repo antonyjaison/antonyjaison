@@ -7,6 +7,8 @@ const AboutPage = () => {
   return (
     <main className={styles.wrapper}>
 
+      <h3 className={styles.page_name}>_about-me</h3>
+
       <div className={styles.sidebar}>
         <div className={styles.sidebar_left}>
           <img src="/icons/terminal.svg" alt="sidebar_img" />

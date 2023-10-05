@@ -39,13 +39,15 @@ const profileData = [
             id: Math.floor(Math.random() * Date.now()),
             name: "antonyjaison639@gmail.com",
             for:"email",
-            type: "data"
+            type: "link",
+            href:"mailto:antonyjaison639@gmail.com"
         },
         {
             id: Math.floor(Math.random() * Date.now()),
             name: "+91 7736676823",
             for:"phone",
-            type: "data"
+            type: "link",
+            href:"tel:7736676823"
         },
         ],
     },
