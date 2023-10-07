@@ -13,6 +13,12 @@ const ProjectInfo = () => {
 
             <div className={styles.body}>
                 <ProjectCard/>
+                <ProjectCard/>
+                <ProjectCard/>
+                <ProjectCard/>
+                <ProjectCard/>
+                <ProjectCard/>
+          
             </div>
         </div>
     )

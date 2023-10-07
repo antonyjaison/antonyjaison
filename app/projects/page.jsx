@@ -1,8 +1,11 @@
+
 import styles from "@styles/projects.module.scss"
 import project_category from "@data/projects_category"
 import ProjectInfo from "@components/ProjectInfo"
 
+
 const Projectpage = () => {
+
   return (
     <main className={styles.wrapper}>
       <h3 className={styles.page_name}>_projects</h3>
