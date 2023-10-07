@@ -1,0 +1,44 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    width: inherit;
+    height: var(--body-header-height);
+    border-bottom: var(--border);
+    display: flex;
+
+    .tab {
+      height: inherit;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      padding: 0 14px;
+      border-right: var(--border);
+      white-space: nowrap;
+      .folder_name {
+        display: none;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--text-color-cmt);
+        cursor: pointer;
+      }
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .body{
+    flex: 1;
+    margin-right: 26px;
+    border-right: var(--border);
+    transition: all 0.35s;
+
+  }
+}

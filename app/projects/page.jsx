@@ -1,6 +1,6 @@
 import styles from "@styles/projects.module.scss"
 import project_category from "@data/projects_category"
-import AccordionTab from "@components/AccordionTab"
+import ProjectInfo from "@components/ProjectInfo"
 
 const Projectpage = () => {
   return (
@@ -8,7 +8,6 @@ const Projectpage = () => {
       <h3 className={styles.page_name}>_projects</h3>
 
       <div className={styles.sidebar}>
-
         <div className={styles.tab}>
           <input className={styles.tab_checkbox} type="checkbox" id="projects" />
           <div className={styles.label}>
@@ -21,9 +20,7 @@ const Projectpage = () => {
               projects
             </label>
           </div>
-
           <div className={styles.tab_content}>
-
             {project_category.map(project => {
               return (
                 <div className={styles.tab_option}>
@@ -35,16 +32,14 @@ const Projectpage = () => {
                 </div>
               )
             })}
-
-
-
-
-
           </div>
-
         </div>
-
       </div>
+
+      <div className={styles.main_content}>
+        <ProjectInfo />
+      </div>
+
 
     </main>
   )
