@@ -27,6 +27,8 @@
       height: 145px;
       img {
         width: inherit;
+        height: inherit;
+        object-fit: cover;
         border-radius: 15px 15px 0 0;
       }
       .project_type_img {
@@ -67,6 +69,24 @@
           font-size: 14px;
           font-weight: 450;
           cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    .card {
+      .project_details {
+        padding: 30px;
+        p {
+          font-size: 16px;
+        }
+        .project_buttons {
+          flex-direction: column;
+          gap: 15px;
         }
       }
     }

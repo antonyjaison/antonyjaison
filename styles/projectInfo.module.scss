@@ -3,8 +3,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  //   position: relative;
-
   .header {
     width: inherit;
     height: var(--body-header-height);
@@ -44,30 +42,87 @@
     padding: 50px;
 
     overflow-y: scroll;
-    height: calc(calc(
+    height: calc(
       calc(
-          100vh -
-            calc(
+        calc(
+            100vh -
               calc(
-                  calc(
-                      calc(calc(100vh - var(--main-wrapper-height)) / 2) +
-                        var(--header-height)
-                    ) + var(--body-header-height)
-                ) + var(--header-height)
-            )
-        ) - var(--header-height) + 10px)
+                calc(
+                    calc(
+                        calc(calc(100vh - var(--main-wrapper-height)) / 2) +
+                          var(--header-height)
+                      ) + var(--body-header-height)
+                  ) + var(--header-height)
+              )
+          ) - var(--header-height) + 10px
+      )
     );
-    &::-webkit-scrollbar-thumb{
-        background-color: var(--text-color-cmt);
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--text-color-cmt);
     }
-    &::-webkit-scrollbar{
-        width: 26px;
-        padding: 10px;
+    &::-webkit-scrollbar {
+      width: 26px;
+      padding: 10px;
     }
-    &::-webkit-scrollbar-track{
-        background-color: transparent;
-        border-left: var(--border);
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-left: var(--border);
+    }
+  }
+}
+
+@media (max-width: 886px) {
+  .wrapper {
+    .header {
+      border: none;
+      height: fit-content;
+      margin-top: 38px;
+      .tab {
+        border: none;
+        .folder_name {
+          display: block;
+          color: #fff;
+        }
+        p {
+          display: flex;
+        }
+        img {
+          display: none;
+        }
+      }
     }
 
+    .body {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: nowrap;
+      padding:17px 20px 38px;
+      height: fit-content;
+      overflow-y: hidden;
+      min-height: calc(
+        calc(
+          calc(
+              100vh -
+                calc(
+                  calc(
+                      calc(
+                          calc(calc(100vh - var(--main-wrapper-height)) / 2) +
+                            var(--header-height)
+                        ) + var(--body-header-height)
+                    ) + var(--header-height)
+                )
+            ) - var(--header-height) + 10px
+        )
+      );
+      height: fit-content;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 }
