@@ -23,9 +23,16 @@ h1, h2, h3, p {
   --main-wrapper-width: 95%;
   --body-header-height:40px;
   --border:1px solid var(--border-color);
+
   --card-bg-color: #011221;
   --card-button-bg-color: #1C2B3A;
   --card-heading-color:#5565e8;
+
+  --input-text-color:#465E77;
+
+  --data-type-color:#C98BDF;
+  --variable-color:#5565E8;
+  --string-color:#FEA55F;
 }
 
 /* Apply styles to the body */

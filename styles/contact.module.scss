@@ -1,0 +1,136 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  .page_name {
+    display: none;
+  }
+}
+
+.main_content {
+  flex: 1;
+  display: flex;
+  .content {
+    flex: 1;
+    border-right: var(--border);
+    display: flex;
+    flex-direction: column;
+    .header {
+      width: inherit;
+      height: var(--body-header-height);
+      border-bottom: var(--border);
+      display: flex;
+
+      .tab {
+        height: inherit;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        padding: 0 14px;
+        border-right: var(--border);
+        white-space: nowrap;
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          color: var(--text-color-cmt);
+          cursor: pointer;
+        }
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+    .contact_form {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .code_content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color-cmt);
+  }
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  border-right: var(--border);
+  display: flex;
+  .sidebar_left {
+    padding-top: 17px;
+    height: 100%;
+    border-right: var(--border);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+  }
+  .sidebar_right {
+    width: 80%;
+  }
+}
+
+@media (max-width: 886px) {
+  .wrapper {
+    flex-direction: column;
+    min-height: 84vh;
+    height: fit-content;
+    .page_name {
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 450;
+      padding: 21px 27px;
+    }
+  }
+
+  .main_content {
+    flex-direction: column;
+    .content {
+      flex: 1;
+      border-right: var(--border);
+    }
+    .code_content {
+      flex: 1;
+    }
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: var(--border);
+    display: flex;
+    .sidebar_left {
+      display: none;
+    }
+    .sidebar_right {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
