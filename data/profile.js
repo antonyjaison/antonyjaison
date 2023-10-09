@@ -111,6 +111,25 @@ const profileData = [
                 content: [{ id: crypto.randomUUID(), name: "hobbie.txt", text: "lorem ipsumm",type: "file" }],
             },
         ],
+    },
+    {
+        id: crypto.randomUUID(),
+        title: "images",
+        type: "folder",
+        content: [
+            {
+                id: crypto.randomUUID(),
+                name: "antony.png",
+                type: "image",
+                for:"image",
+            },
+            {
+                id: crypto.randomUUID(),
+                name: "antony_2.jpg",
+                type: "image",
+                for:"image",
+            },
+        ],
     }
 ]
 

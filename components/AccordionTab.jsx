@@ -3,15 +3,14 @@
 import styles from "@styles/accordionTab.module.scss";
 import Link from "next/link";
 
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addDetails } from "@features/about/aboutSlice";
 
 const AccordionTab = ({ section }) => {
   const dispatch = useDispatch()
-  const data = useSelector(state => state.about.about)
 
   const isFolder = (type) => {
-    if (type === "file" || type === "data" || type === "link") {
+    if (type === "file" || type === "data" || type === "link" || type === "image") {
       return false;
     } else return true;
   };
@@ -48,7 +47,9 @@ const AccordionTab = ({ section }) => {
   };
 
   const addToAboutStore = (data) => {
-    dispatch(addDetails(data))
+    if (data.type !== 'folder') {
+      dispatch(addDetails(data))
+    }
   }
 
   return (
@@ -96,7 +97,10 @@ const AccordionTab = ({ section }) => {
                 </>
               ) : (
                 <>
-                  <div className={styles.inner_label}>
+                  <div onClick={() => {
+                    addToAboutStore(data)
+                  }
+                  } className={styles.inner_label}>
                     <label for={`i-${data.id}`}>
                       {isFolder(data.type) && (
                         <img
@@ -117,7 +121,7 @@ const AccordionTab = ({ section }) => {
                   return (
                     <div onClick={() => {
                       addToAboutStore(item)
-                      }} className={styles.inner_tab}>
+                    }} className={styles.inner_tab}>
                       <img src="/icons/txt.svg" alt="" />
                       <p>{item.name}</p>
                     </div>

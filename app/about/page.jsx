@@ -2,6 +2,7 @@ import AccordionTab from "@components/AccordionTab";
 import styles from "@styles/about.module.scss";
 import profileData from "@data/profile";
 import AboutInfo from "@components/AboutInfo";
+import AboutImage from "@components/AboutImage";
 
 const AboutPage = () => {
   return (
@@ -28,10 +29,7 @@ const AboutPage = () => {
         </div>
 
         <div className={styles.code_content}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
-          illum nemo maiores laudantium ipsa ab incidunt accusantium, ipsum
-          aliquam dicta? Quam aut facere autem, eius eum sequi suscipit corrupti
-          atque?
+          <AboutImage/>
         </div>
       </div>
 
