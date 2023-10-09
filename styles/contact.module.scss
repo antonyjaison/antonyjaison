@@ -91,16 +91,19 @@
   .wrapper {
     flex-direction: column;
     min-height: calc(
-      100vh -
-        calc(
-          calc(
+      calc(
+          100vh -
+            calc(
               calc(
-                  calc(calc(100vh - var(--main-wrapper-height)) / 2) +
-                    var(--header-height)
-                ) + 61px
-            ) + var(--header-height)
-        )
+                  calc(
+                      calc(calc(100vh - var(--main-wrapper-height)) / 2) +
+                        var(--header-height)
+                    ) + 61px
+                ) + var(--header-height)
+            )
+        ) + 25px
     );
+    height: fit-content;
     .page_name {
       display: block;
       color: #fff;
