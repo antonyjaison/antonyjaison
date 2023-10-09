@@ -22,10 +22,12 @@ export default function Home() {
 
           <div className={styles.github_section}>
             <p>// you can also see it on my Github page</p>
-            <p>
-              const githubLink =
+            <p className={styles.github_link}>
+              <span className={styles.data_type}>const </span><span className={styles.variable_name}>githubLink</span><span> = </span>
               <Link href="https://github.com/antonyjaison/">
-                “https://github.com/antonyjaison/
+                <span className={styles.string}>
+                  “https://github.com/antonyjaison/
+                </span>
               </Link>
             </p>
           </div>
