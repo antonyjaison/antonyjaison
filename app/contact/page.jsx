@@ -8,7 +8,7 @@ const ContactPage = () => {
   return (
     <main className={styles.wrapper}>
 
-      <h3 className={styles.page_name}>_about-me</h3>
+      <h3 className={styles.page_name}>_contact-me</h3>
 
       <div className={styles.sidebar}>
         <div className={styles.sidebar_left}>
@@ -40,7 +40,10 @@ const ContactPage = () => {
         </div>
 
         <div className={styles.code_content}>
+          <div className={styles.header}>
+          </div>
           <ContactCodeSection />
+          <div></div>
         </div>
       </div>
 

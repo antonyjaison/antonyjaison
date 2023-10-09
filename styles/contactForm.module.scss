@@ -14,7 +14,7 @@
     }
     input,
     textarea {
-      min-width: 370px;
+      width: 370px;
       height: 41px;
       border-radius: 8px;
       border: 1px solid var(--text-color-cmt);
@@ -44,5 +44,19 @@
     font-size: 14px;
     font-weight: 450;
     padding: 10px 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .wrapper {
+    gap: 18px;
+    padding: 0 5%;
+    .input_group {
+      width: 100%;
+      input,
+      textarea {
+        width: 100%;
+      }
+    }
   }
 }
