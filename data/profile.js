@@ -3,7 +3,7 @@ import crypto from "crypto"
 const profileData = [
     {
         id: crypto.randomUUID(),
-        title: "personal info",
+        title: "personal-info",
         type: "folder",
         content: [
             {

@@ -18,7 +18,7 @@ const AboutPage = () => {
         </div>
         <div className={styles.sidebar_right}>
           {profileData.map((section) => (
-            <AccordionTab section={section}  key={section.id}/>
+            <AccordionTab key={section.id} section={section}/>
           ))}
         </div>
       </div>

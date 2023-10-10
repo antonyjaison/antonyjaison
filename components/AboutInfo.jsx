@@ -14,15 +14,15 @@ const AboutInfo = () => {
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <div className={styles.tab}>
-          <p><span className={styles.folder_name}>// personal info /</span><span> {data?.name}</span></p>
+          <p><span className={styles.folder_name}>//</span><span> {data?.name}</span></p>
           <img src="/icons/close.svg" alt="close-icon" />
         </div>
       </div>
 
       <div className={styles.body}>
-        {text?.map((line) => {
+        {text?.map((line,index) => {
           return (
-            <div className={styles.code_wrapper}>
+            <div key={index} className={styles.code_wrapper}>
               <div className={styles.code_line_num}>
                 <p>{lineCount++}</p>
               </div>

@@ -6,14 +6,12 @@ import { useSelector } from 'react-redux'
 const AboutImage = () => {
     const data = useSelector(state => state.about.imageData)
 
-    console.log(data)
-
     return (
         <div className={styles.wrapper}>
 
             <div className={styles.header}>
                 <div className={styles.tab}>
-                    <p><span className={styles.folder_name}>// personal info /</span><span> {data?.name}</span></p>
+                    <p><span className={styles.folder_name}>//</span><span> {data?.name}</span></p>
                     <img src="/icons/close.svg" alt="close-icon" />
                 </div>
             </div>

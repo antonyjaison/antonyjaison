@@ -1,4 +1,5 @@
 import SnakeGame from "@components/SnakeGame";
+import TypeWriterText from "@components/TypeWriterText";
 import styles from "@styles/homepage.module.scss";
 import Link from "next/link";
 
@@ -17,7 +18,7 @@ export default function Home() {
             <h3>Hi all. I am</h3>
             <h1 className={styles.desktop}>Antony Jaison</h1>
             <h1 className={styles.name_mob}>Antony <br /> Jaison</h1>
-            <h2>{"> Full-stack developer"}</h2>
+            <TypeWriterText />
           </div>
 
           <div className={styles.github_section}>

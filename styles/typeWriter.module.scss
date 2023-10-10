@@ -1,0 +1,12 @@
+.typewriter_text {
+  color: #4d5bce;
+  font-size: 32px;
+  font-weight: 450;
+}
+
+@media (max-width: 600px) {
+  .typewriter_text {
+    color: #43D9AD;
+    font-size: 20px;
+  }
+}
