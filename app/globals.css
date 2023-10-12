@@ -6,33 +6,36 @@
 }
 
 /* Reset margin for specific elements */
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0;
 }
 
 /* Define CSS custom properties (variables) */
 :root {
-  --bg-color: #010C15;
-  --text-color-cmt: #607B96;
+  --bg-color: #010c15;
+  --text-color-cmt: #607b96;
   --wrapper-bg-color: #011627;
-  --border-color: #1E2D3D;
+  --border-color: #1e2d3d;
   --sidebar-width: 310px;
   --header-height: 55px;
-  --active-link-border: #FEA55F;
+  --active-link-border: #fea55f;
   --main-wrapper-height: 90vh;
   --main-wrapper-width: 95%;
-  --body-header-height:40px;
-  --border:1px solid var(--border-color);
+  --body-header-height: 40px;
+  --border: 1px solid var(--border-color);
 
   --card-bg-color: #011221;
-  --card-button-bg-color: #1C2B3A;
-  --card-heading-color:#5565e8;
+  --card-button-bg-color: #1c2b3a;
+  --card-heading-color: #5565e8;
 
-  --input-text-color:#465E77;
+  --input-text-color: #465e77;
 
-  --data-type-color:#C98BDF;
-  --variable-color:#5565E8;
-  --string-color:#FEA55F;
+  --data-type-color: #c98bdf;
+  --variable-color: #5565e8;
+  --string-color: #fea55f;
 }
 
 /* Apply styles to the body */
@@ -65,13 +68,25 @@ body {
 /* Media query for screens up to 600px */
 @media (max-width: 600px) {
   :root {
-    --main-wrapper-width:100%;
+    --main-wrapper-width: 100%;
     --main-wrapper-height: 100vh;
   }
-  body{
+  body {
     padding: 15px;
     height: fit-content;
     min-height: 100vh;
     align-items: start;
   }
+}
+.snakeBoard {
+  border-radius: inherit !important;
+  background: rgba(1, 22, 39, 0.84) !important;
+  box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset !important;
+  overflow: hidden;
+}
+.snakeBoardCell {
+  border: none !important;
+  border-radius: 0 !important;
+  height: inherit !important;
+  width: 23 !important;
 }
