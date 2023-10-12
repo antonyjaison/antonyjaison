@@ -49,8 +49,51 @@
       background: rgba(1, 22, 39, 0.84);
       box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;
     }
-    .control_section{
+    .control_section {
       flex: 1;
+      .snake_control_btns {
+        // width: 100%;
+        border-radius: 8px;
+        background: rgba(1, 20, 35, 0.19);
+        padding: 15px;
+        p {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 450;
+        }
+        .snake_control_btns_wrapper {
+          padding-top: 15px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-column-gap: 5px;
+          grid-row-gap: 5px;
+          place-items: center;
+          .btn_1 {
+            grid-area: 1 / 2 / 2 / 3;
+          }
+          .btn_2 {
+            grid-area: 2 / 1 / 3 / 2;
+          }
+          .btn_3 {
+            grid-area: 2 / 2 / 3 / 3;
+          }
+          .btn_4 {
+            grid-area: 2 / 3 / 3 / 4;
+          }
+          button {
+            width: 50px;
+            height: 28px;
+            border-radius: 8px;
+            border: 1px solid #1e2d3d;
+            background: #010c15;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+          }
+        }
+      }
     }
   }
 }

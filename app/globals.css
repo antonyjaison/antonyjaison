@@ -86,7 +86,6 @@ body {
 }
 .snakeBoardCell {
   border: none !important;
-  border-radius: 0 !important;
   height: inherit !important;
   width: 23 !important;
 }

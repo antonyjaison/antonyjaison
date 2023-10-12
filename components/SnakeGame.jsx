@@ -1,12 +1,13 @@
 "use client"
 
 import styles from '@styles/snakeGame.module.scss'
-import { Snake } from '@json2d/react-snake-lib'
+// import { Snake } from '@json2d/react-snake-lib'
+import { Snake } from 'react-snake-lib'
 
 const SnakeGame = () => {
 
     const bgColor = "rgba(1, 22, 39, 0.84)"
-    const snakeColor  = "#43D9AD"
+    const snakeColor = "#43D9AD"
 
     return (
         <div className={styles.wrapper}>
@@ -18,51 +19,74 @@ const SnakeGame = () => {
 
                 <div className={styles.game_section}>
 
-                    {/* <Snake
-                        startOnLoad
-                        initialSnake={[
-                            { x: 2, y: 0 },
-                            { x: 2, y: 1 },
-                            { x: 2, y: 2 },
-                            { x: 2, y: 3 },
-                            { x: 2, y: 4 },
-                        ]}
-                        initialDirection="down"
+                    <Snake
                         width="100%"
                         height="100%"
-                        bgColor={bgColor}
+                        bgColor="transparent"
                         innerBorderColor={bgColor}
                         snakeSpeed={100}
                         borderColor={bgColor}
                         snakeColor={snakeColor}
                         snakeHeadColor={snakeColor}
-                        appleColor="tomato"
+                        appleColor="#FEA55F"
                         borderRadius={5}
-                        snakeHeadRadius={1}
+                        snakeHeadRadius={10}
                         borderWidth={0}
                         shakeBoard={true}
                         boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-                        size={20}
+                        size={16}
                         startGameText="Start Game"
                         startButtonStyle={{
                             color: "white",
                             padding: "6px 20px",
-                            backgroundColor: "rgba(1, 22, 39, 0.84)",
+                            backgroundColor: snakeColor,
                             borderRadius: "10px",
-                            fontSize: "17px",
+                            fontSize: "16px",
                             fontWeight: "600",
                             cursor: "pointer"
                         }}
                         startButtonHoverStyle={{
-                            backgroundColor: "#43D9AD"
+                            backgroundColor: snakeColor
                         }}
                         noWall={true}
-                    /> */}
+                    />
 
                 </div>
 
                 <div className={styles.control_section}>
+                    <div className={styles.snake_control_btns}>
+                        <p>// use keyboard</p>
+                        <p>// arrows to play</p>
 
+                        <div className={styles.snake_control_btns_wrapper}>
+
+                            <div className={styles.btn_1}>
+                                <button>
+                                    <img src="/icons/top_arrow.svg" alt="" />
+                                </button>
+                            </div>
+                            <div className={styles.btn_2}>
+                                <button>
+                                    <img src="/icons/top_arrow.svg" alt="" />
+                                </button>
+                            </div>
+                            <div className={styles.btn_3}>
+                                <button>
+                                    <img src="/icons/top_arrow.svg" alt="" />
+                                </button>
+                            </div>
+                            <div className={styles.btn_4}>
+                                <button>
+                                    <img src="/icons/top_arrow.svg" alt="" />
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className={styles.settings_wrapper}>
+
+                    </div>
                 </div>
 
             </div>
