@@ -78,11 +78,15 @@ body {
     align-items: start;
   }
 }
+
+
+/* overrided the snake game component */
 .snakeBoard {
   border-radius: inherit !important;
   background: rgba(1, 22, 39, 0.84) !important;
   box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset !important;
   overflow: hidden;
+  position: relative;
 }
 .snakeBoardCell {
   border: none !important;

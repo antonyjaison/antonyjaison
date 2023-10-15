@@ -15,7 +15,7 @@ export default function Home() {
       <div className={styles.details}>
         <div className={styles.details_div}>
           <div className={styles.name_section}>
-            <h3>Hi all. I am</h3>
+            <h3>Hi all, I am</h3>
             <h1 className={styles.desktop}>Antony Jaison</h1>
             <h1 className={styles.name_mob}>Antony <br /> Jaison</h1>
             <TypeWriterText />
@@ -27,7 +27,7 @@ export default function Home() {
               <span className={styles.data_type}>const </span><span className={styles.variable_name}>githubLink</span><span> = </span>
               <Link href="https://github.com/antonyjaison/">
                 <span className={styles.string}>
-                  “https://github.com/antonyjaison/
+                  "https://github.com/antonyjaison/"
                 </span>
               </Link>
             </p>

@@ -3,11 +3,23 @@
 import styles from '@styles/snakeGame.module.scss'
 // import { Snake } from '@json2d/react-snake-lib'
 import { Snake } from 'react-snake-lib'
+import { useState } from 'react'
 
 const SnakeGame = () => {
 
     const bgColor = "rgba(1, 22, 39, 0.84)"
     const snakeColor = "#43D9AD"
+    const buttonColor = "#FEA55F"
+
+    const [isGameStart, setIsGameStart] = useState(false)
+
+    const onGameStart = () => {
+        setIsGameStart(true)
+    }
+    const onGameOver = () => {
+        setIsGameStart(false)
+
+    }
 
     return (
         <div className={styles.wrapper}>
@@ -20,6 +32,11 @@ const SnakeGame = () => {
                 <div className={styles.game_section}>
 
                     <Snake
+
+                        // onScoreChange={onScoreChange}
+                        onGameOver={onGameOver}
+                        onGameStart={onGameStart}
+
                         width="100%"
                         height="100%"
                         bgColor="transparent"
@@ -34,22 +51,27 @@ const SnakeGame = () => {
                         borderWidth={0}
                         shakeBoard={true}
                         boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-                        size={16}
+                        size={35}
                         startGameText="Start Game"
                         startButtonStyle={{
-                            color: "white",
+                            color: "black",
                             padding: "6px 20px",
-                            backgroundColor: snakeColor,
+                            backgroundColor: buttonColor,
                             borderRadius: "10px",
                             fontSize: "16px",
                             fontWeight: "600",
-                            cursor: "pointer"
+                            cursor: "pointer",
+                            position:"absolute",
+                            bottom:"55px"
                         }}
                         startButtonHoverStyle={{
                             backgroundColor: snakeColor
                         }}
                         noWall={true}
                     />
+
+                    {isGameStart ? "" : <img src="/images/game_img.svg" alt="" />}
+                    
 
                 </div>
 
@@ -67,17 +89,17 @@ const SnakeGame = () => {
                             </div>
                             <div className={styles.btn_2}>
                                 <button>
-                                    <img src="/icons/top_arrow.svg" alt="" />
+                                    <img src="/icons/left_arrow.svg" alt="" />
                                 </button>
                             </div>
                             <div className={styles.btn_3}>
                                 <button>
-                                    <img src="/icons/top_arrow.svg" alt="" />
+                                    <img src="/icons/bottom_arrow.svg" alt="" />
                                 </button>
                             </div>
                             <div className={styles.btn_4}>
                                 <button>
-                                    <img src="/icons/top_arrow.svg" alt="" />
+                                    <img src="/icons/right_arrow.svg" alt="" />
                                 </button>
                             </div>
 
