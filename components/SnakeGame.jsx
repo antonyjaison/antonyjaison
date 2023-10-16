@@ -2,7 +2,7 @@
 
 import styles from "@styles/snakeGame.module.scss";
 import { Snake } from "react-snake-lib";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SnakeGame = () => {
   const bgColor = "rgba(1, 22, 39, 0.84)";
@@ -10,7 +10,8 @@ const SnakeGame = () => {
   const buttonColor = "#FEA55F";
 
   const [isGameStart, setIsGameStart] = useState(false);
-  const [score, setScore] = useState(0)
+  const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
   const [gameSettings, setGameSettings] = useState({
     border: false,
     level: 1,
@@ -21,6 +22,27 @@ const SnakeGame = () => {
   };
   const onGameOver = () => {
     setIsGameStart(false);
+
+    const snakeGame = localStorage.getItem("snakeGame") || null;
+
+    if (snakeGame === null) {
+      localStorage.setItem(
+        "snakeGame",
+        JSON.stringify({
+          best: score,
+        })
+      );
+    } else {
+      const { best } = JSON.parse(localStorage.getItem("snakeGame"));
+      if (score > best) {
+        localStorage.setItem(
+          "snakeGame",
+          JSON.stringify({
+            best: score,
+          })
+        );
+      }
+    }
   };
 
   const addBorder = () => {
@@ -46,13 +68,44 @@ const SnakeGame = () => {
   };
 
   const selectGameBorder = () => {
-    return !gameSettings.border
-  }
-
+    return !gameSettings.border;
+  };
 
   const onScoreChange = (score) => {
-    setScore(score)
-  }
+    const snakeGame = localStorage.getItem("snakeGame") || null;
+    if (snakeGame === null) {
+      localStorage.setItem(
+        "snakeGame",
+        JSON.stringify({
+          best: score,
+        })
+      );
+      setBestScore(0);
+    } else {
+      const snakeGame = JSON.parse(localStorage.getItem("snakeGame"));
+      if (score > snakeGame.best) {
+        localStorage.setItem(
+          "snakeGame",
+          JSON.stringify({
+            best: score,
+          })
+        );
+      }
+    }
+
+    setScore(score);
+  };
+
+  useEffect(() => {
+    const snakeGame = localStorage.getItem("snakeGame") || null;
+
+    if (snakeGame === null) {
+      setBestScore(0);
+    } else {
+      const { best } = JSON.parse(localStorage.getItem("snakeGame"));
+      setBestScore(best);
+    }
+  }, []);
 
   return (
     <div className={styles.wrapper}>
@@ -61,7 +114,11 @@ const SnakeGame = () => {
       <img className={styles.img_3} src="/icons/snake_corner_img.svg" alt="" />
       <img className={styles.img_4} src="/icons/snake_corner_img.svg" alt="" />
       <div className={styles.game_wrapper}>
-        <div className={`${styles.game_section} ${gameSettings.border ? styles.game_section_active : ""}`}>
+        <div
+          className={`${styles.game_section} ${
+            gameSettings.border ? styles.game_section_active : ""
+          }`}
+        >
           <Snake
             onScoreChange={onScoreChange}
             onGameOver={onGameOver}
@@ -155,7 +212,7 @@ const SnakeGame = () => {
             </div>
 
             <div className={styles.level_section}>
-              <p>// level</p>
+              {/* <p>// level</p> */}
               <div className={styles.level_section_wrapper}>
                 <div className={styles.level}>
                   <button
@@ -197,7 +254,7 @@ const SnakeGame = () => {
             </div>
 
             <div className={styles.score_section_wrapper}>
-              <p>// score</p>
+              {/* <p>// score</p> */}
               <div className={styles.score_section}>
                 <div className={styles.score}>
                   <h4>score</h4>
@@ -205,7 +262,7 @@ const SnakeGame = () => {
                 </div>
                 <div className={styles.score}>
                   <h4>best</h4>
-                  <p>60</p>
+                  <p>{bestScore}</p>
                 </div>
               </div>
             </div>

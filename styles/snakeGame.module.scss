@@ -72,7 +72,7 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 20px;
       .snake_control_btns {
         // width: 100%;
         border-radius: 8px;
@@ -178,6 +178,7 @@
                 place-items: center;
                 border: none;
                 cursor: pointer;
+                outline: none;
                 p {
                   @extend .control_text;
                 }
