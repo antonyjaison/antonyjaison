@@ -1,3 +1,8 @@
+.control_text {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 450;
+}
 .wrapper {
   position: relative;
   width: 530px;
@@ -49,7 +54,8 @@
       border-radius: 8px;
       background: rgba(1, 22, 39, 0.84);
       box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;
-      img{
+      transition: all 0.3s;
+      img {
         position: absolute;
         top: 0;
         left: 50%;
@@ -57,17 +63,23 @@
         transform: translateX(-50%);
       }
     }
+    .game_section_active{
+      transition: all 0.3s;
+      border: 4px solid rgba(4, 250, 202, 0.3);
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
     .control_section {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       .snake_control_btns {
         // width: 100%;
         border-radius: 8px;
         background: rgba(1, 20, 35, 0.19);
         padding: 15px;
         p {
-          color: #fff;
-          font-size: 14px;
-          font-weight: 450;
+          @extend .control_text;
         }
         .snake_control_btns_wrapper {
           padding-top: 15px;
@@ -99,6 +111,106 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
+          }
+        }
+      }
+      .settings_wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+          @extend .control_text;
+        }
+        .border_section_wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .border_section {
+            width: 100%;
+            height: 36px;
+            display: flex;
+            border-radius: 8px;
+            background-color: rgba(1, 22, 39, 0.88);
+            overflow: hidden;
+            button {
+              height: inherit;
+              flex: 1;
+              background-color: inherit;
+              border: none;
+              font-family: "Fira Code", monospace;
+              cursor: pointer;
+              border-radius: inherit;
+              outline: none;
+              @extend .control_text;
+            }
+            .border_btn_active {
+              transition: all 0.3s;
+              box-shadow: inset 0 0 0 3px rgba(4, 250, 202, 0.3);
+              transform: scale(1);
+            }
+          }
+        }
+        .level_section {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .level_section_wrapper {
+            display: flex;
+            justify-content: space-around;
+            .level {
+              width: 36px;
+              height: 36px;
+              filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+              background-color: #1e2d3d;
+              border-radius: 50%;
+              display: grid;
+              place-items: center;
+              .lvl_1,
+              .lvl_2,
+              .lvl_3 {
+                width: 26.25px;
+                height: 26.25px;
+                background-color: #114b4a;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+                border-radius: inherit;
+                display: grid;
+                place-items: center;
+                border: none;
+                cursor: pointer;
+                p {
+                  @extend .control_text;
+                }
+              }
+              .lvl_active {
+                transition: all 0.3s;
+                box-shadow: inset 0 0 0 3px rgba(4, 250, 202, 0.3);
+              }
+            }
+          }
+        }
+        .score_section_wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .score_section {
+            border-radius: 8px;
+            background: rgba(1, 20, 35, 0.19);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            .score {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              color: #fff;
+              font-weight: 400;
+              p {
+                font-size: 20px;
+                font-weight: 500;
+              }
+            }
           }
         }
       }
