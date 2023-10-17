@@ -3,7 +3,7 @@
 import styles from "@styles/navbar.module.scss";
 
 import Link from "next/link";
-import { usePathname,useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
 
 const Navbar = () => {
@@ -11,23 +11,24 @@ const Navbar = () => {
   const [animateLinks, setAnimateLinks] = useState(false);
 
   const menuRef = useRef(null);
-  const router = useRouter()
 
   useEffect(() => {
-    // Trigger the animation when the component mounts
     setAnimateLinks(true);
   }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    document.body.style.overflow = isOpen ? "scroll" : "hidden"
+    document.body.style.overflow = isOpen ? "scroll" : "hidden";
     menuRef.current.style.display = isOpen ? "none" : "flex";
   };
 
-  const goto = (href) => {
-    setIsOpen(!isOpen);
-    router.push(href)
-  }
+  const close = () => {
+    setTimeout(() => {
+      setIsOpen(!isOpen);
+      document.body.style.overflow = "scroll";
+      menuRef.current.style.display = "none";
+    },1000)
+  };
 
   const links = [
     { name: "_hello", link: "/" },
@@ -37,9 +38,14 @@ const Navbar = () => {
 
   const pathname = usePathname();
   return (
+    <>
     <nav className={styles.header}>
       <div className={styles.header_links_left}>
-        <Link className={styles.name_link} href="/">
+        <Link
+          className={styles.name_link}
+          href="/"
+          onClick={() => close()}
+        >
           antony-jaison
         </Link>
         <div
@@ -54,12 +60,17 @@ const Navbar = () => {
                 key={link.link}
                 className={pathname === link.link ? styles.active_link : null}
                 href={link.link}
+                onClick={() => close()}
               >
                 {link.name}
               </Link>
             );
           })}
-          <Link className={styles.mobile_contact_link} href="/contact">
+          <Link
+            onClick={() => close()}
+            className={styles.mobile_contact_link}
+            href="/contact"
+          >
             _contact-me
           </Link>
         </div>
@@ -82,6 +93,7 @@ const Navbar = () => {
       </div>
       <div className={isOpen ? styles.bg_dim_active : styles.bg_dim}></div>
     </nav>
+    </>
   );
 };
 
