@@ -12,7 +12,7 @@ const Projectpage = () => {
 
       <div className={styles.sidebar}>
         <div className={styles.tab}>
-          <input className={styles.tab_checkbox} type="checkbox" id="projects" />
+          <input className={styles.tab_checkbox} type="checkbox" id="projects"/>
           <div className={styles.label}>
             <label for="projects">
               <img
