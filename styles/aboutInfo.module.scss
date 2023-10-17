@@ -3,7 +3,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  
+
   .header {
     width: inherit;
     height: var(--body-header-height);
@@ -19,7 +19,7 @@
       padding: 0 14px;
       border-right: var(--border);
       white-space: nowrap;
-      .folder_name{
+      .folder_name {
         display: none;
       }
       p {
@@ -28,51 +28,77 @@
         color: var(--text-color-cmt);
         cursor: pointer;
       }
-      img{
+      img {
         cursor: pointer;
       }
     }
   }
 
-  .body{
-    flex: 1;
-    margin-right: 26px;
+  .body {
+    // flex: 1;
     border-right: var(--border);
     padding: 18px 40px;
     transition: all 0.35s;
-    p{
+
+    height: calc(
+      calc(
+        calc(
+            100vh -
+              calc(
+                calc(
+                    calc(
+                        calc(calc(100vh - var(--main-wrapper-height)) / 2) +
+                          var(--header-height)
+                      ) + var(--body-header-height)
+                  ) + var(--header-height)
+              )
+          ) - var(--header-height) + 10px
+      )
+    );
+    overflow-y: scroll;
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--text-color-cmt);
+    }
+    &::-webkit-scrollbar {
+      width: 26px;
+      padding: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+      border-left: var(--border);
+    }
+    p {
       font-size: 18px;
       color: var(--text-color-cmt);
       text-align: left;
     }
 
-    .code_wrapper{
+    .code_wrapper {
       display: flex;
-      .code_line_num{
+      .code_line_num {
         width: 50px;
-        p{
+        p {
           width: inherit;
         }
-
       }
-      .star{
+      .star {
         width: 20px;
       }
     }
   }
 }
 
-@media(max-width:886px){
-  .wrapper {    
+@media (max-width: 886px) {
+  .wrapper {
     .header {
-      border-bottom:none;  
+      border-bottom: none;
       height: fit-content;
-      .tab {        
-        height: fit-content;  
+      .tab {
+        height: fit-content;
         padding: 0 27px;
         padding-top: 38px;
         border-right: none;
-        .folder_name{
+        .folder_name {
           display: block;
           color: #fff;
         }
@@ -80,24 +106,24 @@
           font-weight: 450;
           display: flex;
         }
-        img{
+        img {
           display: none;
         }
       }
     }
-  
-    .body{
+
+    .body {
       margin-right: 0;
       border-right: none;
-      padding: 17px 27px;  
-      .code_wrapper{
-        .code_line_num{
-          display: none;  
-        }
-        .star{
+      padding: 17px 27px;
+      .code_wrapper {
+        .code_line_num {
           display: none;
         }
-        .commented_code{
+        .star {
+          display: none;
+        }
+        .commented_code {
           font-weight: 450;
           line-height: 150%;
         }

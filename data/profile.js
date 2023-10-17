@@ -11,7 +11,7 @@ const profileData = [
                 type: "folder",
                 name: "bio",
                 for:"bio",
-                content: [{ id: crypto.randomUUID(), name: "bio.txt", text: "Hello!\n I'm [Your Name],\n a [Your Age]-year-old [Your Occupation or Student Major],\n from [Your Hometown or Current Location].\n \n I enjoy [Your Interests or Hobbies],\n which I've been doing for [Number of Years].\n \n In my free time,\n I like [Describe what you like to do, e.g., reading, hiking].\n \n I value [Share one of your beliefs or values, e.g., kindness],\n and I'm working towards [Share a personal goal or aspiration].\n \n Let's connect and chat about [Topics or Interests you'd like to discuss]!\n" }],
+                content: [{ id: crypto.randomUUID(), name: "bio.txt", text: "Hello there! 👋\nI'm Antony Jaison, a passionate Full Stack Developer with a mission to bring digital visions to life. 🚀\n \nBased in Angamaly, Kerala, India, I specialize in crafting web applications that seamlessly blend both front-end and back-end technologies. 💻\n \nWith a strong foundation in IT as a B.Tech student, I've been on this exciting journey for several years. I'm driven by the art of coding, problem-solving, and creating elegant, user-friendly solutions. 🌟\n \nWhen I'm not crafting lines of code, you can find me enjoying movies, web-series, and cheering for my favorite football team. ⚽🎬\n \nI'm a firm believer in continuous learning, and I'm committed to staying at the forefront of the ever-evolving tech landscape. 📚💡\n \nI'm currently working on pushing the boundaries of what's possible in web development and making the internet a more functional and beautiful place. 🌐✨\n \nLet's connect and discuss your next big project. Whether it's about coding, technology trends, or your favorite films, I'm all ears. 🤝🗨️\n"}],
             },
             {
                 id: crypto.randomUUID(),
@@ -19,8 +19,8 @@ const profileData = [
                 type: "folder",
                 for:"education",
                 content: [
-                    { id: crypto.randomUUID(), name: "high-school.txt", text: "lorem ipsumm", type: "file" },
-                    { id: crypto.randomUUID(),name: "university.txt", text: "lorem ipsumm dolor", type: "file" },
+                    { id: crypto.randomUUID(), name: "high-school.txt", text: "High School: St. Joseph's High School, Poovathussery, Ernakulam, Kerala (Grades 1-10) 🏫📚", type: "file" },
+                    { id: crypto.randomUUID(),name: "university.txt", text: "Higher Secondary: Brahmanandodayam Higher Secondary School, Kalady, Kerala (Plus One and Plus Two) 🏫📚", type: "file" },
                 ],
             },
             {
@@ -28,7 +28,8 @@ const profileData = [
                 name: "interests",
                 type: "folder",
                 for:"interests",
-                content: [{ id: crypto.randomUUID(), type: "file", name: "interests.txt", text: "lorem ipsumm" }],
+                content: [{ id: crypto.randomUUID(), type: "file", name: "interests.txt", text: "Interests: \n\n Web Development: My passion for coding drives my interest \n in building web applications and exploring the latest technologies. \n\n Movies & Web-Series: I enjoy diving into the world of cinema, \n discovering compelling stories, and the art of filmmaking. \n\n Football: A dedicated fan, I find excitement and joy in the beautiful game, both as a spectator and a player."
+             }],
             },
         ],
     },
@@ -61,28 +62,28 @@ const profileData = [
             name: "instagram",
             type: "link",
             for:"instagram",
-            href:""
+            href:"https://www.instagram.com/antony_jaison__/"
         },
         {
             id: crypto.randomUUID(),
             name: "linkedin",
             type: "link",
             for:"linkedin",
-            href:""
+            href:"https://www.linkedin.com/in/antony-jaison-1b9353235/"
         },
         {
             id: crypto.randomUUID(),
             name: "facebook",
             type: "link",
             for:"facebook",
-            href:""
+            href:"https://www.facebook.com/antonyjaison456/"
         },
         {
             id: crypto.randomUUID(),
             name: "x",
             type: "link",
             for:"x",
-            href:"https://www.google.com"
+            href:"https://twitter.com/AntonyJaison18"
         },
         ],
     },
@@ -95,7 +96,7 @@ const profileData = [
             name: "skills",
             type: "folder",
             for:"skills",
-            content: [{ id: crypto.randomUUID(), name: "skills.txt", text: "lorem ipsumm",type: "file"}],
+            content: [{ id: crypto.randomUUID(), name: "skills.txt", text: "Skills: \n\n- JavaScript \n- HTML \n- CSS \n- React \n- React Native \n- Next.js \n- Vue.js \n- Node.js \n- Tailwind CSS \n- Bootstrap \n- Figma",type: "file"}],
         },],
     },
     {
@@ -108,7 +109,7 @@ const profileData = [
                 name: "hobbie",
                 type: "folder",
                 for:"hobbie",
-                content: [{ id: crypto.randomUUID(), name: "hobbie.txt", text: "lorem ipsumm",type: "file" }],
+                content: [{ id: crypto.randomUUID(), name: "hobbie.txt", text: "Hobbies:\n\n - Reading: I find solace and knowledge in \nthe pages of books, exploring various genres.\n\n - Hiking: Nature calls, and I answer by \nhitting the trails, discovering new landscapes.\n\n - Traveling: Exploring new places, cultures, and cuisines is a passion I cherish.\n\n Let's connect and discuss your next big \n project or collaborate on any web development venture.\n I'm here to bring your digital ideas to life! 💻🌐🚀",type: "file" }],
             },
         ],
     },
