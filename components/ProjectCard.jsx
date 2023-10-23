@@ -1,35 +1,62 @@
-import styles from '@styles/projectCard.module.scss'
+import styles from "@styles/projectCard.module.scss";
 
-const ProjectCard = () => {
-    return (
-        <div className={styles.wrapper}>
-            <div className={styles.title}>
-                <h4><span>Project 1</span> // _ui_animations</h4>
-            </div>
-            <div className={styles.card}>
-                <div className={styles.project_img}>
-                    <img src="/images/project_2.png" alt="" />
-                    <div className={styles.project_type_img}>
-                        <img src="/icons/react.svg" alt="" />
-                    </div>
-                </div>
+const ProjectCard = ({ name, description, image, link, repo, type }) => {
+  console.log(name, description, image, link, repo, type);
 
-                <div className={styles.project_details}>
-                    <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                    <div className={styles.project_buttons}>
-                        <a href="#">
-                            View project
-                        </a>
-                        <a href="#">
-                            View repository
-                        </a>
-                    </div>
+  const project_image = image
+    ? `/images/projects/${image}`
+    : "/images/project_2.png";
 
-                </div>
+  var project_type = "";
 
-            </div>
+  switch (type) {
+    case "react":
+      project_type = (
+        <div className={styles.project_type_img}>
+          <img src="/icons/react.svg" alt="" />
         </div>
-    )
-}
+      );
+      break;
 
-export default ProjectCard
+    case "nextjs":
+      project_type = (
+        <div
+          style={{ backgroundColor: "#81D4AF" }}
+          className={styles.project_type_img}
+        >
+          <img src="/icons/vue.svg" alt="" />
+        </div>
+      );
+      break;
+  }
+
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.title}>
+        <h4>
+          <span>Project 1</span> // {name}
+        </h4>
+      </div>
+      <div className={styles.card}>
+        <div className={styles.project_img}>
+          <img src={project_image} alt="" />
+
+          {/* <div className={styles.project_type_img}>
+            <img src="/icons/react.svg" alt="" />
+          </div> */}
+          {project_type}
+        </div>
+
+        <div className={styles.project_details}>
+          <p>{description}</p>
+          <div className={styles.project_buttons}>
+            {link && <a href={link}>View project</a>}
+            <a href={repo}>View repository</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCard;
