@@ -10,6 +10,7 @@ const ContactForm = () => {
 
     const nameInputRef = useRef(null)
     const emailInputRef = useRef(null)
+    const messageRef = useRef(null)
 
     const dispatch = useDispatch()
 
@@ -25,10 +26,9 @@ const ContactForm = () => {
         dispatch(onchangetext(e.target.value))
     }
 
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault()
 
-        console.log(nameInputRef.current.value)
 
         if (nameInputRef.current.value === "") {
             nameInputRef.current.style.border = "1px solid red"
@@ -42,7 +42,22 @@ const ContactForm = () => {
                 name: nameInputRef.current.value,
                 email: emailInputRef.current.value
             })
+
+            const res = await fetch('/api/contact',{
+                method:"POST",
+                headers:{
+                    'Content-Type':'application/json'
+                },
+                body:JSON.stringify({
+                    name:nameInputRef.current.value,
+                    email:emailInputRef.current.value,
+                    message:messageRef.current.value
+                })
+            })
+            const json = await res.json()
+            console.log(json)
         }
+
     }
 
     return (
@@ -57,7 +72,7 @@ const ContactForm = () => {
             </div>
             <div className={styles.input_group}>
                 <label htmlFor="message">_message</label>
-                <textarea onChange={changeText} name="message" id="message" cols="30" rows="10"></textarea>
+                <textarea ref={messageRef} onChange={changeText} name="message" id="message" cols="30" rows="10"></textarea>
             </div>
             <input onClick={onSubmit} type="submit" value="submit-message" />
         </form>

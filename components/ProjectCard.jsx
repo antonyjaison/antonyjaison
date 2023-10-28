@@ -1,7 +1,6 @@
 import styles from "@styles/projectCard.module.scss";
 
 const ProjectCard = ({ name, description, image, link, repo, type }) => {
-  console.log(name, description, image, link, repo, type);
 
   const project_image = image
     ? `/images/projects/${image}`
