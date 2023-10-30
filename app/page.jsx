@@ -9,7 +9,8 @@ export const metadata = {
     "Explore the journey of Antony Jaison, a passionate Full Stack Web Developer and 3rd-year IT engineering student. Discover a world of creativity, innovation, and coding excellence through a showcase of projects, skills, and experiences. Join me on this digital odyssey as I transform ideas into web solutions that make a difference.",
 };
 
-export default function Home() {
+export default async function Home() {
+
   return (
     <main className={styles.wrapper}>
       <div className={styles.details}>

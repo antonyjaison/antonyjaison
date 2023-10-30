@@ -1,36 +1,18 @@
 import { NextResponse } from "next/server";
-import { google } from "googleapis"
+import connectToSpreadSheet from "@utils/connectToSpreadSheet";
 
 export async function POST(req, res) {
     const { name, email, message } = await req.json()
 
     try {
-        const auth = new google.auth.GoogleAuth({
-            keyFile: "credentials.json",
-            scopes: ["https://www.googleapis.com/auth/spreadsheets"]
-        })
 
-        // client instance
-        const client = await auth.getClient()
+        const spreadsheetRes = await connectToSpreadSheet(process.env.formID, [name, email, message])
 
-        // instance of google sheets api
-        const googleSheets = google.sheets({ version: "v4", auth: client })
-
-        const spreadSheetId = process.env.formID
-
-
-        const spredsheet_res = await googleSheets.spreadsheets.values.append({
-            auth,
-            spreadsheetId: spreadSheetId,
-            range: "Sheet1!A:B",
-            valueInputOption: "USER_ENTERED",
-            resource: {
-                values: [
-                    [name, email, message]
-                ]
-            }
-        })
-        return NextResponse.json({ status: 200, body: { message: "success", status: true } });
+        if (spreadsheetRes) {
+            return NextResponse.json({ status: 200, body: { message: "success", status: true } });
+        }else{
+            return NextResponse.json({ status: 500, body: { message: "failed", status: false } });
+        }
 
     } catch (err) {
         console.log(err)
