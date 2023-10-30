@@ -1,8 +1,28 @@
+.success_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  h3 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 450;
+  }
+  p {
+    color: var(--text-color-cmt);
+    font-size: 18px;
+    font-weight: 450;
+    text-align: center;
+  }
+}
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+  transition: all 0.3s ease-in-out;
   .input_group {
     display: flex;
     flex-direction: column;

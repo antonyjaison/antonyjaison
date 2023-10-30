@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { google } from "googleapis"
 
-export async function POST (req, res){
+export async function POST(req, res) {
     const { name, email, message } = await req.json()
 
     try {
@@ -30,10 +30,10 @@ export async function POST (req, res){
                 ]
             }
         })
-        return NextResponse.json({ status: 200, body: { message: "success" } });
+        return NextResponse.json({ status: 200, body: { message: "success", status: true } });
 
     } catch (err) {
         console.log(err)
-        return NextResponse.json({ status: 500, body: { message: "failed" } });
+        return NextResponse.json({ status: 500, body: { message: "failed", status: false } });
     }
 }
