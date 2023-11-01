@@ -7,15 +7,15 @@ const projects = [
         name:"civil-dept",
         repo:"github.com/antonyjaison/civil-dept",
         live:"",
-        image:"",
+        image:"civil.png",
         description:"This website is for the civil engineering students.",
         type:"nextjs"
     },
     {
         id:crypto.randomUUID(),
         name:"fsit-website",
-        repo:"github.com/antonyjaison/fsit-website",
-        live:"fsit.co.in",
+        repo:"https://github.com/antonyjaison/fsit-website",
+        live:"https://fsit.co.in",
         image:"fsit.png",
         description:"FSIT is a leading infrastructural development company, specializing in transforming destinations into popular tourist spots.",
         type:"react"
@@ -23,36 +23,36 @@ const projects = [
     {
         id:crypto.randomUUID(),
         name:"upscale22",
-        repo:"github.com/antonyjaison/upscale22",
-        live:"upscale22.live",
-        image:"",
+        repo:"https://github.com/antonyjaison/upscale22",
+        live:"https://upscale22.live",
+        image:"upscale22.png",
         description:"Upscale'22 is the 3rd edition of the flagship event conducted by IEEE SB GEC Palakkad",
         type:"react"
     },
     {
         id:crypto.randomUUID(),
         name:"collage-project",
-        repo:"github.com/antonyjaison/collage-project",
+        repo:"https://github.com/antonyjaison/collage-project",
         live:"",
-        image:"",
+        image:"collage_pro.png",
         description:"My collage project",
         type:"php"
     },
     {
         id:crypto.randomUUID(),
         name:"geeksgig",
-        repo:"github.com/antonyjaison/geeksgig",
-        live:"geeksgig.com",
-        image:"",
-        description:"our startup",
+        repo:"https://github.com/antonyjaison/geeksgig",
+        live:"https://geeksgig.vercel.app/",
+        image:"geeksgig.png",
+        description:"our startup website, development in progress",
         type:"nextjs"
     },
     {
         id:crypto.randomUUID(),
         name:"MH_Website",
-        repo:"github.com/antonyjaison/MH_Website",
-        live:"",
-        image:"",
+        repo:"https://github.com/antonyjaison/MH_Website",
+        live:"https://mh-website-7lmx.vercel.app/",
+        image:"mh.png",
         description:"Our college men's hostel website",
         type:"react"
     },
@@ -79,7 +79,7 @@ const projects = [
         name:"url-shortner",
         repo:"https://github.com/antonyjaison/url-shortner",
         live:"",
-        image:"",
+        image:"url_shortner.png",
         description:"url shortener app made with react and nodejs",
         type:"react"
     },
@@ -88,7 +88,7 @@ const projects = [
         name:"SummaryBot",
         repo:"https://github.com/antonyjaison/SummaryBot",
         live:"",
-        image:"",
+        image:"summary_bot.png",
         description:"summarises the articles from websites",
         type:"nextjs"
     },
@@ -97,9 +97,9 @@ const projects = [
         name:"calculator",
         repo:"https://github.com/antonyjaison/calculator",
         live:"",
-        image:"",
-        description:"calculator made with react-native",
-        type:"react-native"
+        image:"calculator.png",
+        description:"calculator made with react",
+        type:"react"
     },
     {
         id:crypto.randomUUID(),
@@ -107,7 +107,7 @@ const projects = [
         repo:"https://github.com/antonyjaison/ShoppyKart",
         live:"",
         image:"",
-        description:"calculator made with react-native",
+        description:"calculator made with react",
         type:"vanilajs"
     },
     {
@@ -115,9 +115,9 @@ const projects = [
         name:"cine-mate",
         repo:"https://github.com/antonyjaison/cine-mate",
         live:"",
-        image:"",
-        description:"movies app made with react-native",
-        type:"react-native"
+        image:"cinemate.png",
+        description:"movies app made with react",
+        type:"react"
     }
 ]
 
