@@ -3,20 +3,19 @@ import crypto from "crypto"
 const project_category = [
     {
         name:"React",
-        id:crypto.randomUUID()
-
+        id:"react",
     },
     {
         name:"Flutter",
-        id:crypto.randomUUID()
+        id:"flutter"
     },
     {
         name:"Nextjs",
-        id:crypto.randomUUID()
+        id:"nextjs"
     },
     {
         name:"React Native",
-        id:crypto.randomUUID()
+        id:"react-native"
     }
 ]
 

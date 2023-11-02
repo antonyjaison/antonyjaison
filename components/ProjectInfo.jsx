@@ -1,8 +1,9 @@
 import styles from "@styles/projectInfo.module.scss";
 import ProjectCard from "./ProjectCard";
-import projects from "@data/projects";
+// import projects from "@data/projects";
 
-const ProjectInfo = () => {
+const ProjectInfo = ({ projects }) => {
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>

@@ -1,9 +1,7 @@
-import crypto from "crypto"
-
 
 const projects = [
     {
-        id:crypto.randomUUID(),
+        id:"civil-dept",
         name:"civil-dept",
         repo:"github.com/antonyjaison/civil-dept",
         live:"",
@@ -12,7 +10,7 @@ const projects = [
         type:"nextjs"
     },
     {
-        id:crypto.randomUUID(),
+        id:"fsit-website",
         name:"fsit-website",
         repo:"https://github.com/antonyjaison/fsit-website",
         live:"https://fsit.co.in",
@@ -21,7 +19,7 @@ const projects = [
         type:"react"
     },
     {
-        id:crypto.randomUUID(),
+        id:"upscale22",
         name:"upscale22",
         repo:"https://github.com/antonyjaison/upscale22",
         live:"https://upscale22.live",
@@ -30,7 +28,7 @@ const projects = [
         type:"react"
     },
     {
-        id:crypto.randomUUID(),
+        id:"collage-project",
         name:"collage-project",
         repo:"https://github.com/antonyjaison/collage-project",
         live:"",
@@ -39,7 +37,7 @@ const projects = [
         type:"php"
     },
     {
-        id:crypto.randomUUID(),
+        id:"geeksgig",
         name:"geeksgig",
         repo:"https://github.com/antonyjaison/geeksgig",
         live:"https://geeksgig.vercel.app/",
@@ -48,7 +46,7 @@ const projects = [
         type:"nextjs"
     },
     {
-        id:crypto.randomUUID(),
+        id:"mh-website",
         name:"MH_Website",
         repo:"https://github.com/antonyjaison/MH_Website",
         live:"https://mh-website-7lmx.vercel.app/",
@@ -57,7 +55,7 @@ const projects = [
         type:"react"
     },
     {
-        id:crypto.randomUUID(),
+        id:"linkedin-clone",
         name:"linkedin-clone",
         repo:"https://github.com/antonyjaison/linkedin-clone",
         live:"",
@@ -66,7 +64,7 @@ const projects = [
         type:"react"
     },
     {
-        id:crypto.randomUUID(),
+        id:"react_quiz_app",
         name:"react_quiz_app",
         repo:"https://github.com/antonyjaison/react_quiz_app",
         live:"",
@@ -75,7 +73,7 @@ const projects = [
         type:"react"
     },
     {
-        id:crypto.randomUUID(),
+        id:"url-shortner",
         name:"url-shortner",
         repo:"https://github.com/antonyjaison/url-shortner",
         live:"",
@@ -84,7 +82,7 @@ const projects = [
         type:"react"
     },
     {
-        id:crypto.randomUUID(),
+        id:"summarybot",
         name:"SummaryBot",
         repo:"https://github.com/antonyjaison/SummaryBot",
         live:"",
@@ -93,16 +91,16 @@ const projects = [
         type:"nextjs"
     },
     {
-        id:crypto.randomUUID(),
+        id:"calculator",
         name:"calculator",
         repo:"https://github.com/antonyjaison/calculator",
         live:"",
         image:"calculator.png",
         description:"calculator made with react",
-        type:"react"
+        type:"react-native"
     },
     {
-        id:crypto.randomUUID(),
+        id:"shoppykart",
         name:"ShoppyKart",
         repo:"https://github.com/antonyjaison/ShoppyKart",
         live:"",
@@ -111,13 +109,13 @@ const projects = [
         type:"vanilajs"
     },
     {
-        id:crypto.randomUUID(),
+        id:"cine-mate",
         name:"cine-mate",
         repo:"https://github.com/antonyjaison/cine-mate",
         live:"",
         image:"cinemate.png",
         description:"movies app made with react",
-        type:"react"
+        type:"react-native"
     }
 ]
 

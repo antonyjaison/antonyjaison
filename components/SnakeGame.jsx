@@ -2,6 +2,7 @@
 
 import styles from "@styles/snakeGame.module.scss";
 import { Snake } from "react-snake-lib";
+// import { Snake } from "react-snake-lib";
 import { useEffect, useState } from "react";
 
 const SnakeGame = () => {
