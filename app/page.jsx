@@ -1,4 +1,4 @@
-// import SnakeGame from "@components/SnakeGame";
+import SnakeGame from "@components/SnakeGame";
 import TypeWriterText from "@components/TypeWriterText";
 import styles from "@styles/homepage.module.scss";
 import Link from "next/link";
@@ -37,7 +37,7 @@ export default async function Home() {
       </div>
 
       <div className={styles.code_section}>
-        {/* <SnakeGame /> */}
+        <SnakeGame />
       </div>
     </main>
   );
