@@ -2,7 +2,6 @@ import styles from "@styles/projectCard.module.scss";
 import Link from "next/link";
 
 const ProjectCard = ({ name, description, image, link, repo, type }) => {
-
   const project_image = image
     ? `/images/projects/${image}`
     : "/images/project_2.png";
@@ -28,16 +27,26 @@ const ProjectCard = ({ name, description, image, link, repo, type }) => {
         </div>
       );
       break;
-      case "vuejs":
-        project_type = (
-          <div
-            style={{ backgroundColor: "#81D4AF" }}
-            className={styles.project_type_img}
-          >
-            <img src="/icons/vue.svg" alt="vue" />
-          </div>
-        );
-        break;
+    case "vuejs":
+      project_type = (
+        <div
+          style={{ backgroundColor: "#81D4AF" }}
+          className={styles.project_type_img}
+        >
+          <img src="/icons/vue.svg" alt="vue" />
+        </div>
+      );
+      break;
+    case "vanilajs":
+      project_type = (
+        <div
+          style={{ backgroundColor: "#81D4AF" }}
+          className={styles.project_type_img}
+        >
+          <img src="/icons/js.svg" alt="js" />
+        </div>
+      );
+      break;
   }
 
   return (

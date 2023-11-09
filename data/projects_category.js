@@ -6,8 +6,8 @@ const project_category = [
         id:"react",
     },
     {
-        name:"Flutter",
-        id:"flutter"
+        name:"Vanila Javascript",
+        id:"vanilajs",
     },
     {
         name:"Nextjs",

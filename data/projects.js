@@ -105,7 +105,7 @@ const projects = [
         repo:"https://github.com/antonyjaison/ShoppyKart",
         live:"",
         image:"",
-        description:"calculator made with react",
+        description:"E-commerce website built with html, css and javascript",
         type:"vanilajs"
     },
     {

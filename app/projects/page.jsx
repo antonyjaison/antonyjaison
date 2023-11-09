@@ -5,16 +5,33 @@ import project_category from "@data/projects_category";
 import ProjectInfo from "@components/ProjectInfo";
 import { useState } from "react";
 import { useDispatch,useSelector } from "react-redux";
-import { filterProject } from "@features/projects/projectSlice";
+import { toggleFilter } from "@features/projects/projectSlice";
 
 const Projectpage = () => {
   const [openProjectCategory, setOpenProjectCategory] = useState(true);
 
   const dispatch = useDispatch();
   const projects = useSelector((state) => state.projects.filteredProjects);
+  const activeFilters = useSelector(state => state.projects.activeFilters)
+
+  console.log(activeFilters)
 
   const filterProjects = (type) => {
-    dispatch(filterProject(type))
+    dispatch(toggleFilter(type))
+  }
+
+  const makeImage = (type) => {
+    switch (type) {
+      case "react": return 'react';
+      case "nextjs":return "nextjs";
+      case "vanilajs":return "js";
+      case "react-native":return 'react'
+    }
+  }
+
+  const tabIconStyle = {
+    width:"18px",
+    height:"18px"
   }
 
 
@@ -52,7 +69,7 @@ const Projectpage = () => {
                     onClick={() => filterProjects(project.id)}
                   />
                   <label htmlFor={project.id} className={styles.option_details}>
-                    <img src="/icons/react.svg" alt="react" />
+                    <img style={tabIconStyle} src={`/icons/${makeImage(project.id)}.svg`} alt="react" />
                     <p>{project.name}</p>
                   </label>
                 </div>
